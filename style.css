@@ -1,0 +1,137 @@
+/* Progress Bar Project */
+
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #7d2ae8; */
+  /* background-image: url(https://c.tenor.com/yf9qqsynzlYAAAAM/moving-formation.gif); */
+  background-image: url(bg-img.gif);
+  background-size: cover;
+}
+h1 {
+  color: white;
+}
+.container {
+  display: flex;
+  width: 40%;
+  height: 80%;
+  padding: 50px 0;
+  border-radius: 50%;
+  /* background: #fff; */
+  row-gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  border: 2px solid rgb(245, 128, 128);
+  background-color: #00e1ffe6;
+  width: 150px;
+  height: 30px;
+}
+.btn:hover {
+  background-color: rgb(45, 32, 186);
+  color: white;
+  font-size: 17px;
+  width: 153px;
+  height: 31px;
+  /* transition: all 1s ease-out; */
+}
+.circle {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background: conic-gradient(#ad3bf9 3.6deg, #ededed 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle::before {
+  content: "";
+  position: absolute;
+  height: 210px;
+  width: 210px;
+  border-radius: 50%;
+  /* background-color: rgb(255, 255, 255); */
+}
+.filling {
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  color: #110c0c;
+}
+
+.bottom {
+  width: 250px;
+  height: 15px;
+  background-color: rgb(84, 103, 103);
+  border-radius: 3px;
+  position: relative;
+  background: conic-gradient(rgb(214, 190, 245) 3.6deg 0deg);
+  border: solid 3px rgb(0, 213, 255);
+}
+.bar {
+  width: 1%;
+  height: 10px;
+  background-color: rgb(255, 0, 0);
+}
+.popup {
+  width: 400px;
+  background: rgb(222, 242, 94);
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  /* transition: all 3s ease-in; */
+  /* transition-timing-function: ease-in-out; */
+}
+.open-popup {
+  display: block;
+  /* transition: all 3s ease-in; */
+  /* transition-timing-function: ease-in-out; */
+}
+.popup img {
+  width: 150px;
+  height: 150px;
+  margin-top: -80px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+.popup .okay {
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: #6fd649;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
